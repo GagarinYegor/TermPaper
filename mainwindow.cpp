@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include <QDir>
 #include "ui_mainwindow.h"
 #include <iostream>
 #include <string>
@@ -84,7 +85,9 @@ void MainWindow::on_electfilepushButton_clicked()
 {
     n1 = ui->electchisspinBox->value();
     Dec1 = new Decoration[n1];
-    ifstream fin(ui->electfilelineEdit->text().toStdString());
+    QString path=QDir(QCoreApplication::applicationDirPath()).absoluteFilePath(ui->electfilelineEdit->text());
+    cout << path.toStdString()<<endl;
+    fstream fin(path.toStdString());
     if(fin.is_open()){
         for (int i = 0; i < n1; i++) {
             Dec1[i].B = B1;
@@ -109,7 +112,9 @@ void MainWindow::on_izdanfilepushButton_clicked()
 {
     n2 = ui->izdanchisspinBox->value();
     Dec2 = new Decoration[n2];
-    ifstream fin(ui->izdanfilelineEdit->text().toStdString());
+    QString path=QDir(QCoreApplication::applicationDirPath()).absoluteFilePath(ui->izdanfilelineEdit->text());
+    cout << path.toStdString()<<endl;
+    fstream fin(path.toStdString());
     if(fin.is_open()){
         for (int i = 0; i < n2; i++) {
             Dec2[i].B = B2;
