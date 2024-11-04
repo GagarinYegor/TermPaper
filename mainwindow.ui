@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1024</width>
     <height>600</height>
    </rect>
   </property>
@@ -22,10 +22,30 @@
   <property name="windowIcon">
    <iconset theme="QIcon::ThemeIcon::WeatherClear"/>
   </property>
+  <property name="styleSheet">
+   <string notr="true">MainWindow{
+	background-color: rgb(210, 215, 220);
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QLabel" name="Textlabel">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Работа с данными:</string>
       </property>
@@ -33,8 +53,28 @@
     </item>
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane{
+    border: 1px;
+	background: rgb(175, 200, 220);
+}
+
+QTabBar::tab{
+	background: rgb(80, 155, 255);
+}
+
+QTabBar::tab:selected{
+	background: rgb(175, 200, 220);
+}</string>
+      </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="Vvodtab">
        <attribute name="title">
@@ -59,6 +99,9 @@
           </item>
           <item row="1" column="1">
            <widget class="QSpinBox" name="izdanchisspinBox">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
             <property name="minimum">
              <number>1</number>
             </property>
@@ -69,13 +112,20 @@
           </item>
           <item row="2" column="2">
            <widget class="QPushButton" name="electfilepushButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(80, 155, 255);</string>
+            </property>
             <property name="text">
              <string>Ввод</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QLineEdit" name="electfilelineEdit"/>
+           <widget class="QLineEdit" name="electfilelineEdit">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+           </widget>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="izdanchislabel">
@@ -86,6 +136,9 @@
           </item>
           <item row="0" column="1">
            <widget class="QSpinBox" name="electchisspinBox">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
             <property name="minimum">
              <number>1</number>
             </property>
@@ -102,10 +155,17 @@
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="izdanfilelineEdit"/>
+           <widget class="QLineEdit" name="izdanfilelineEdit">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+           </widget>
           </item>
           <item row="3" column="2">
            <widget class="QPushButton" name="izdanfilepushButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(80, 155, 255);</string>
+            </property>
             <property name="text">
              <string>Ввод</string>
             </property>
@@ -115,6 +175,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="electformpushButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(80, 155, 255);</string>
+          </property>
           <property name="text">
            <string>Ввод данных об оформлениях электронных книг из формы</string>
           </property>
@@ -177,6 +240,9 @@
            <widget class="QPushButton" name="electformvvodpushButton">
             <property name="enabled">
              <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(80, 155, 255);</string>
             </property>
             <property name="text">
              <string>Ввод</string>
@@ -249,6 +315,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="izdanformpushButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(80, 155, 255);</string>
+          </property>
           <property name="text">
            <string>Ввод данных об оформлениях изданных книг из формы</string>
           </property>
@@ -260,6 +329,9 @@
            <widget class="QPushButton" name="izdanformvvodpushButton">
             <property name="enabled">
              <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(80, 155, 255);</string>
             </property>
             <property name="text">
              <string>Ввод</string>
@@ -390,6 +462,9 @@
           </item>
           <item row="0" column="2">
            <widget class="QPushButton" name="electsortpushButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(80, 155, 255);</string>
+            </property>
             <property name="text">
              <string>Отсортировать</string>
             </property>
@@ -433,6 +508,9 @@
           </item>
           <item row="1" column="2">
            <widget class="QPushButton" name="izdanpushButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(80, 155, 255);</string>
+            </property>
             <property name="text">
              <string>Отсортировать</string>
             </property>
@@ -487,6 +565,9 @@
           </item>
           <item row="0" column="2">
            <widget class="QPushButton" name="poiskpushButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(80, 155, 255);</string>
+            </property>
             <property name="text">
              <string>Поиск</string>
             </property>
@@ -531,6 +612,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="udalpushButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(80, 155, 255);</string>
+            </property>
             <property name="text">
              <string>Удалить</string>
             </property>
@@ -559,6 +643,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="infopushButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(80, 155, 255);</string>
+            </property>
             <property name="text">
              <string>Вывод</string>
             </property>
@@ -569,12 +656,21 @@
        </layout>
       </widget>
       <widget class="QWidget" name="Functtab">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
        <attribute name="title">
         <string>Обработка</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
          <widget class="QPushButton" name="maxstranpushButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(80, 155, 255);</string>
+          </property>
           <property name="text">
            <string>Найти оформление с наибольшим кол-вом страниц</string>
           </property>
@@ -595,6 +691,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="illustpushButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(80, 155, 255);</string>
+          </property>
           <property name="text">
            <string>Найти каких иллюстраций больше</string>
           </property>
@@ -615,6 +714,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="raznyazpushButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(80, 155, 255);</string>
+          </property>
           <property name="text">
            <string>Найти кол-во оформлений на разных языках</string>
           </property>

@@ -116,24 +116,46 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 600);
+        MainWindow->resize(1024, 600);
         QFont font;
         font.setFamilies({QString::fromUtf8("Times New Roman")});
         font.setPointSize(14);
         MainWindow->setFont(font);
         QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::WeatherClear));
         MainWindow->setWindowIcon(icon);
+        MainWindow->setStyleSheet(QString::fromUtf8("MainWindow{\n"
+"	background-color: rgb(210, 215, 220);\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Segoe UI")});
+        font1.setPointSize(9);
+        centralwidget->setFont(font1);
+        centralwidget->setStyleSheet(QString::fromUtf8(""));
         verticalLayout_2 = new QVBoxLayout(centralwidget);
         verticalLayout_2->setObjectName("verticalLayout_2");
         Textlabel = new QLabel(centralwidget);
         Textlabel->setObjectName("Textlabel");
+        Textlabel->setFont(font1);
 
         verticalLayout_2->addWidget(Textlabel);
 
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName("tabWidget");
+        tabWidget->setFont(font1);
+        tabWidget->setStyleSheet(QString::fromUtf8("QTabWidget::pane{\n"
+"    border: 1px;\n"
+"	background: rgb(175, 200, 220);\n"
+"}\n"
+"\n"
+"QTabBar::tab{\n"
+"	background: rgb(80, 155, 255);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected{\n"
+"	background: rgb(175, 200, 220);\n"
+"}"));
         Vvodtab = new QWidget();
         Vvodtab->setObjectName("Vvodtab");
         verticalLayout_3 = new QVBoxLayout(Vvodtab);
@@ -152,6 +174,7 @@ public:
 
         izdanchisspinBox = new QSpinBox(Vvodtab);
         izdanchisspinBox->setObjectName("izdanchisspinBox");
+        izdanchisspinBox->setStyleSheet(QString::fromUtf8(""));
         izdanchisspinBox->setMinimum(1);
         izdanchisspinBox->setMaximum(1000);
 
@@ -159,11 +182,13 @@ public:
 
         electfilepushButton = new QPushButton(Vvodtab);
         electfilepushButton->setObjectName("electfilepushButton");
+        electfilepushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         vvodgridLayout->addWidget(electfilepushButton, 2, 2, 1, 1);
 
         electfilelineEdit = new QLineEdit(Vvodtab);
         electfilelineEdit->setObjectName("electfilelineEdit");
+        electfilelineEdit->setStyleSheet(QString::fromUtf8(""));
 
         vvodgridLayout->addWidget(electfilelineEdit, 2, 1, 1, 1);
 
@@ -174,6 +199,7 @@ public:
 
         electchisspinBox = new QSpinBox(Vvodtab);
         electchisspinBox->setObjectName("electchisspinBox");
+        electchisspinBox->setStyleSheet(QString::fromUtf8(""));
         electchisspinBox->setMinimum(1);
         electchisspinBox->setMaximum(1000);
 
@@ -186,11 +212,13 @@ public:
 
         izdanfilelineEdit = new QLineEdit(Vvodtab);
         izdanfilelineEdit->setObjectName("izdanfilelineEdit");
+        izdanfilelineEdit->setStyleSheet(QString::fromUtf8(""));
 
         vvodgridLayout->addWidget(izdanfilelineEdit, 3, 1, 1, 1);
 
         izdanfilepushButton = new QPushButton(Vvodtab);
         izdanfilepushButton->setObjectName("izdanfilepushButton");
+        izdanfilepushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         vvodgridLayout->addWidget(izdanfilepushButton, 3, 2, 1, 1);
 
@@ -199,6 +227,7 @@ public:
 
         electformpushButton = new QPushButton(Vvodtab);
         electformpushButton->setObjectName("electformpushButton");
+        electformpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         verticalLayout_3->addWidget(electformpushButton);
 
@@ -245,6 +274,7 @@ public:
         electformvvodpushButton = new QPushButton(Vvodtab);
         electformvvodpushButton->setObjectName("electformvvodpushButton");
         electformvvodpushButton->setEnabled(false);
+        electformvvodpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         electformvvodgridLayout->addWidget(electformvvodpushButton, 1, 6, 1, 1);
 
@@ -285,6 +315,7 @@ public:
 
         izdanformpushButton = new QPushButton(Vvodtab);
         izdanformpushButton->setObjectName("izdanformpushButton");
+        izdanformpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         verticalLayout_3->addWidget(izdanformpushButton);
 
@@ -293,6 +324,7 @@ public:
         izdanformvvodpushButton = new QPushButton(Vvodtab);
         izdanformvvodpushButton->setObjectName("izdanformvvodpushButton");
         izdanformvvodpushButton->setEnabled(false);
+        izdanformvvodpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         gridLayout->addWidget(izdanformvvodpushButton, 1, 6, 1, 1);
 
@@ -381,6 +413,7 @@ public:
 
         electsortpushButton = new QPushButton(Sorttab);
         electsortpushButton->setObjectName("electsortpushButton");
+        electsortpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         sortgridLayout->addWidget(electsortpushButton, 0, 2, 1, 1);
 
@@ -401,6 +434,7 @@ public:
 
         izdanpushButton = new QPushButton(Sorttab);
         izdanpushButton->setObjectName("izdanpushButton");
+        izdanpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         sortgridLayout->addWidget(izdanpushButton, 1, 2, 1, 1);
 
@@ -431,6 +465,7 @@ public:
 
         poiskpushButton = new QPushButton(Poisktab);
         poiskpushButton->setObjectName("poiskpushButton");
+        poiskpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         poiskgridLayout->addWidget(poiskpushButton, 0, 2, 1, 1);
 
@@ -473,6 +508,7 @@ public:
 
         udalpushButton = new QPushButton(Vivodtab);
         udalpushButton->setObjectName("udalpushButton");
+        udalpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         udalhorizontalLayout->addWidget(udalpushButton);
 
@@ -495,6 +531,7 @@ public:
 
         infopushButton = new QPushButton(Vivodtab);
         infopushButton->setObjectName("infopushButton");
+        infopushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         infohorizontalLayout->addWidget(infopushButton);
 
@@ -504,10 +541,12 @@ public:
         tabWidget->addTab(Vivodtab, QString());
         Functtab = new QWidget();
         Functtab->setObjectName("Functtab");
+        Functtab->setFont(font1);
         verticalLayout_6 = new QVBoxLayout(Functtab);
         verticalLayout_6->setObjectName("verticalLayout_6");
         maxstranpushButton = new QPushButton(Functtab);
         maxstranpushButton->setObjectName("maxstranpushButton");
+        maxstranpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         verticalLayout_6->addWidget(maxstranpushButton);
 
@@ -519,6 +558,7 @@ public:
 
         illustpushButton = new QPushButton(Functtab);
         illustpushButton->setObjectName("illustpushButton");
+        illustpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         verticalLayout_6->addWidget(illustpushButton);
 
@@ -530,6 +570,7 @@ public:
 
         raznyazpushButton = new QPushButton(Functtab);
         raznyazpushButton->setObjectName("raznyazpushButton");
+        raznyazpushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(80, 155, 255);"));
 
         verticalLayout_6->addWidget(raznyazpushButton);
 
@@ -547,7 +588,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
